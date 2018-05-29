@@ -85,10 +85,10 @@ input[type="submit"] {
     padding-bottom: 20px;
   }
 
-  input.depart-date,
-  input.return-date {
-  flex-basis: 47.75%;
-  margin-bottom: 20px;
+    input.depart-date,
+    input.return-date {
+    flex-basis: 47.75%;
+    margin-bottom: 20px;
   }
 
   input[type="submit"] {
@@ -108,10 +108,10 @@ input[type="submit"] {
     padding-bottom: 0;
   }
 
-  input.depart-date,
-  input.return-date {
-  flex-basis: 100%;
-  margin-bottom: 20px;
+    input.depart-date,
+    input.return-date {
+    flex-basis: 100%;
+    margin-bottom: 20px;
   }
 
   input[type="submit"] {
