@@ -2,6 +2,123 @@ body {
   margin: 0;
 }
 
+/* grid-template-areas */
+.container {
+  display: grid;
+  grid-template-columns: 1.42fr repeat(2, 1fr) 1.2fr;
+  grid-template-areas:
+    "header header header header"
+    "text depart-date return-date search";
+  grid-gap: 20px;
+  font-family: "Open Sans", sans-serif;
+  margin: 16px 12px;
+  padding: 10px 20px 15px;
+  max-width: 984px;
+  background-color: #468ee5;
+}
+
+.header,
+.text{
+  margin: 0;
+  color: #ffffff;
+}
+
+.header {
+  grid-area: header;
+  font-size: 24px;
+}
+
+.text {
+  font-size: 10px;
+  line-height: 14px;
+  padding-right: 20px;
+  grid-area: text;
+}
+
+.depart-date {
+  grid-area: depart-date;
+}
+
+.return-date {
+  grid-area: return-date;
+}
+
+.search {
+  grid-area: search;
+}
+
+.depart-date,
+.return-date {
+  min-height: 40px;
+  max-height: 40px;
+  padding-left: 15px;
+  color: #c1c1c1;
+  border: none;
+  border-radius: 1px;
+}
+
+.search {
+  padding: 0;
+  min-height: 40px;
+  max-height: 40px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #f5a623;
+  border: none;
+  border-radius: 1px;
+}
+
+@media screen and (max-width:768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1.1fr) 1.2fr;
+    grid-template-areas:
+      "header header header"
+      "text text text"
+      "depart-date return-date search";
+  }
+}
+
+@media screen and (max-width:440px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "header header"
+      "text text"
+      "depart-date return-date"
+      "search search";
+  }
+  
+  .header {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width:286px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "text"
+      "depart-date"
+      "return-date"
+      "search";
+    grid-gap: 20px 0;
+  }
+  .header {
+    font-size: 18px;
+  }
+}
+
+/* without grid-template-areas */
+
+/* body {
+  margin: 0;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1.42fr repeat(2, 1fr) 1.2fr;
@@ -30,8 +147,8 @@ body {
   padding-right: 20px;
 }
 
-input.depart-date,
-input.return-date {
+.depart-date,
+.return-date {
   min-height: 40px;
   max-height: 40px;
   padding-left: 15px;
@@ -40,7 +157,7 @@ input.return-date {
   border-radius: 1px;
 }
 
-input[type="submit"] {
+input.search {
   padding: 0;
   min-height: 40px;
   max-height: 40px;
@@ -53,7 +170,6 @@ input[type="submit"] {
 }
 
 @media only screen and (max-width:768px) {
-  
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1.1fr) 1.2fr;
@@ -66,11 +182,9 @@ input[type="submit"] {
   .text{
     grid-area: 2 / 1 / 3 / 4;
   }
-  
 }
 
 @media only screen and (max-width:440px) {
-  
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -91,7 +205,6 @@ input[type="submit"] {
 }
 
 @media only screen and (max-width:286px) {
-  
   .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -118,4 +231,4 @@ input[type="submit"] {
   input[type="submit"] {
     grid-row: 4;
   }
-}
+} */
